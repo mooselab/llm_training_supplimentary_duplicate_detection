@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 
 import pandas as pd
 
-
 def _convert_HTML(text):
     # remove duplicate text + extract code blocks 
     # return pure text and code blocks
