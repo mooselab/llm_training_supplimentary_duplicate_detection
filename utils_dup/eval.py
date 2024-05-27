@@ -2,7 +2,6 @@ import numpy as np
 from bs4 import BeautifulSoup
 
 import pandas as pd
-from google.colab import data_table
 
 
 def _convert_HTML(text):
@@ -47,10 +46,8 @@ def _print_post(post):
 
     filtered_post = {key: post[key] for key in selected_keys if key in post}
     df = pd.DataFrame(list(filtered_post.items()), columns=['Key', 'Value'])
-    # print(df)
-    data_table.DataTable(df, include_index=False)
+    print(df)
     print('-----------------------------------')
-    # data_table.DataTable(df, include_index=False)
 
 def return_pred_top_n(i, testset, label_list, ranking_list, top_n = 3):
 
